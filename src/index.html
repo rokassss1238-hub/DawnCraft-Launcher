@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self';">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DawnCraft Launcher</title>
+<style>
+:root{color-scheme:dark;font-family:Segoe UI,Arial,sans-serif;background:#071426;color:#eaf5ff}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 75% 0%,#123b67 0%,#0a1d34 38%,#06111f 100%)}
+.shell{max-width:1060px;margin:auto;padding:34px 38px}.top{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;gap:14px;align-items:center}.logo{width:48px;height:48px;border-radius:15px;background:linear-gradient(145deg,#69d5ff,#1474df);display:grid;place-items:center;font-weight:900;color:#041426;font-size:22px;box-shadow:0 8px 30px #1688e755}
+h1{font-size:23px;letter-spacing:2px;margin:0}.sub{font-size:12px;color:#83b6dd;letter-spacing:3px;margin-top:5px}
+.pill{border:1px solid #28577f;background:#0d2844;color:#9bdcff;border-radius:99px;padding:9px 14px;font-size:12px}
+.hero{margin:55px 0 28px}.hero h2{font-size:42px;line-height:1.08;margin:0 0 12px;max-width:650px}.hero p{color:#9cb9d2;font-size:15px;line-height:1.6;max-width:650px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}.card{background:linear-gradient(145deg,#102b48dd,#0a1d32ee);border:1px solid #214a70;border-radius:20px;padding:24px;min-height:230px;box-shadow:0 18px 45px #0003}
+.tag{font-size:11px;letter-spacing:2px;color:#62caff}.card h3{font-size:24px;margin:12px 0 7px}.card p{color:#9cb6cd;line-height:1.5;font-size:14px;min-height:42px}
+button{border:0;border-radius:12px;padding:13px 18px;font-weight:700;cursor:pointer;background:linear-gradient(100deg,#36baf5,#2477e8);color:#031426;font-size:14px;box-shadow:0 8px 25px #147bd344}
+button.secondary{background:#142f4b;color:#d9efff;border:1px solid #2a5276;box-shadow:none}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.bottom{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;margin-top:18px}.panel{border:1px solid #1d4263;border-radius:16px;background:#091b2edb;padding:20px}
+.panel h4{margin:0 0 10px;font-size:15px}.panel p,.panel label{font-size:13px;color:#9bb7d0;line-height:1.55}
+.status{margin-top:14px;border-radius:12px;background:#061426;padding:13px 15px;color:#9edbff;font-size:13px;min-height:44px;border:1px solid #183b5c}
+input{accent-color:#38bdf8}footer{margin-top:28px;color:#5f809c;font-size:11px;text-align:center}
+@media(max-width:760px){.shell{padding:22px}.cards,.bottom{grid-template-columns:1fr}.hero{margin-top:38px}.hero h2{font-size:34px}}
+</style>
+</head>
+<body><div class="shell">
+<header class="top"><div class="brand"><div class="logo">D</div><div><h1>DAWNCRAFT</h1><div class="sub">MINECRAFT LAUNCHER</div></div></div><div class="pill">CLIENT 2.0 · WINDOWS</div></header>
+<section class="hero"><h2>Tavo Minecraft.<br><span style="color:#57c8ff">Tavo pasaulis.</span></h2><p>Vienas mėlynas valdymo centras Java ir Bedrock leidimams. Pirmą kartą reikia įdiegti oficialius žaidimus ir prisijungti prie Microsoft paskyros, kuriai priklauso žaidimai.</p></section>
+<section class="cards">
+<article class="card"><div class="tag">01 / JAVA EDITION</div><h3>Minecraft Java</h3><p>Atidaro oficialų Minecraft Launcher. Jei jis dar neįdiegtas, atvers oficialų atsisiuntimo puslapį.</p><div class="actions"><button id="java">PALEISTI JAVA</button><button class="secondary" id="javaInstall">ĮDIEGTI</button></div></article>
+<article class="card"><div class="tag">02 / BEDROCK EDITION</div><h3>Minecraft for Windows</h3><p>Bando paleisti įdiegtą Bedrock versiją. Jei jos nėra, atvers oficialų Xbox / Microsoft Store puslapį.</p><div class="actions"><button id="bedrock">PALEISTI BEDROCK</button><button class="secondary" id="bedrockInstall">ĮDIEGTI</button></div></article>
+</section>
+<section class="bottom"><div class="panel"><h4>Offline profilis</h4><label><input type="checkbox" id="offline"> Išsaugoti vietinį DawnCraft profilį šiam kompiuteriui</label><p>Šis nustatymas išsaugo tik tavo launcherio pasirinkimą. Jis neapeina Microsoft prisijungimo, žaidimo licencijos ar pirmojo autentifikavimo. Java offline žaidimui pirmiausia reikia prisijungti oficialiai.</p></div><div class="panel"><h4>Launcher būsena</h4><p id="status" class="status">Paruošta. Pasirink Java arba Bedrock.</p><div class="actions"><button class="secondary" id="official">OFICIALUS MINECRAFT</button></div></div></section>
+<footer>DawnCraft Launcher nėra oficialus Mojang / Microsoft produktas. Minecraft žaidimai ir prekių ženklai priklauso jų savininkams.</footer>
+</div><script src="renderer.js"></script></body></html>
