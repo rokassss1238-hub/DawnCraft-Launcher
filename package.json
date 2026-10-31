@@ -1,0 +1,20 @@
+{
+  "name": "dawncraft-launcher",
+  "version": "2.0.0",
+  "description": "DawnCraft Launcher for Minecraft Java and Bedrock on Windows",
+  "main": "src/main.js",
+  "scripts": { "start": "electron .", "dist": "electron-builder --win nsis" },
+  "devDependencies": { "electron": "^36.3.1", "electron-builder": "^26.0.12" },
+  "build": {
+    "appId": "com.dawncraft.launcher",
+    "productName": "DawnCraft Launcher",
+    "files": ["src/**/*", "package.json"],
+    "win": { "target": "nsis" },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}
